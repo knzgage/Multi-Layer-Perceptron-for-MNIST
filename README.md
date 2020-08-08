@@ -1,0 +1,41 @@
+# Multi-Layer-Perceptron-for-MNIST
+A MLP built in python to classify the MNIST hand-written numbers data set
+
+<h2>About the Data</h2>
+The data that I worked with can be found [here.](https://www.kaggle.com/oddrationale/mnist-in-csv)
+The data is split up into 60,000 training samples and 10,000 test samples, all of which have labels.
+Each of these examples correspond to a handwritten number, so all examples contain the label and then 784 values corresponding to
+the pixel intensity of the original 24x24 images.
+
+<h2>What I Learned</h2>
+This was a project for my first machine learning class in Spring 2020, and it was designed so that
+we could learn how to work with large sets of data and implement basic machine learning concepts.
+I performed three different experiments to see how different hyperparameter can alter the performance
+of a multi-layer perceptron. The three hyperparameters tested were: the number of hidden layers,
+the momentum value, and the number of training examples. My results for these experiments are described below.
+
+<h3>Varying the Number of Units</h3>
+For this experiment, the momentum was fixed at .9 and testing was conducted over 50 epochs.
+The number of hidden layers was tested at 20, 50, and 100.<br/><br/>
+  
+I discovered that as the number of hidden layers increased, the accuracy on both the training and test sets increased.
+In addition to accuracy increasing, the number of epochs needed for the accuracy to reach its max decreased.
+
+<h3>Changing the Momentum</h4>
+The MLP uses a calculus technique called gradient descent in order to find the weight values that minimize the
+error of the testing set. The momentum hyperparameter determines how much the weights are altered after each epoch.
+For this experiment, momentum was tested at 0, 0.25, 0.5, and 0.9.<br/><br/>
+  
+The momentum didn't seem to have much of the impact on the final accuracy of the test data, but I noticed that
+as the momentum increased the number of epochs required for the data to converge also increased. This is likely due
+to the momentum being so high that it kept going overshooting the global minima. I certain situations, if the momentum was
+too low, our weights could get stuck at a local minima but that didn't appear to be the case since all tests had relatively
+similar accuracies.
+
+<h3>Altering the Size of the Training Data</h3>
+In this final test, I observed how altering the size of the training set impacted the accuracy of the teset set.
+I used the full training set, half the training set, and the a quarter of the training set.<br/><br/> 
+  
+As expected, the accuracy of the MLP on the test set decreased as the size of the training set decreased. This is likely
+due to the MLP overfitting to the training data. As the size of the training set decreased, my model's predictive power decreased,
+this is because the model didn't get to witness as many different ways to write each of the numbers.
