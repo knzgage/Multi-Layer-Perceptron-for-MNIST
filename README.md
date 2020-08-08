@@ -2,7 +2,10 @@
 A MLP built in python to classify the MNIST hand-written numbers data set
 
 <h2>About the Data</h2>
-The data that I worked with can be found [here.](https://www.kaggle.com/oddrationale/mnist-in-csv)
+The data that I worked with can be found 
+
+[here.](https://www.kaggle.com/oddrationale/mnist-in-csv)
+
 The data is split up into 60,000 training samples and 10,000 test samples, all of which have labels.
 Each of these examples correspond to a handwritten number, so all examples contain the label and then 784 values corresponding to
 the pixel intensity of the original 24x24 images.
@@ -17,7 +20,9 @@ the momentum value, and the number of training examples. My results for these ex
 <h3>Varying the Number of Units</h3>
 For this experiment, the momentum was fixed at .9 and testing was conducted over 50 epochs.
 The number of hidden layers was tested at 20, 50, and 100.<br/><br/>
-  
+
+![20 Hidden Layers](https://user-images.githubusercontent.com/40836138/89721481-d29a4680-d992-11ea-8d69-39106b6705db.png)
+
 I discovered that as the number of hidden layers increased, the accuracy on both the training and test sets increased.
 In addition to accuracy increasing, the number of epochs needed for the accuracy to reach its max decreased.
 
